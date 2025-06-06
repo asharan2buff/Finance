@@ -32,7 +32,7 @@ api_client = ApiClient(configuration)
 client = plaid_api.PlaidApi(api_client)
 
 # Access token you got earlier
-access_token = "access-sandbox-b2b055e9-fc0a-4857-8600-d1d351c14c67"
+access_token = os.getenv("ACCESS_TOKEN")
 
 # Create request object
 start_date = datetime.now().date() - timedelta(days=30)
